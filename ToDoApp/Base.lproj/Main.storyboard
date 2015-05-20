@@ -343,11 +343,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add new to-do" id="ISL-2Y-6Un">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="PSv-79-h6i"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="5FS-qy-oAv"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="PSv-79-h6i">
+                            <connections>
+                                <segue destination="8Sg-d7-A0L" kind="unwind" unwindAction="unwindToList:" id="FYs-1f-mnp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="5FS-qy-oAv">
+                            <connections>
+                                <segue destination="8Sg-d7-A0L" kind="unwind" unwindAction="unwindToList:" id="sI9-Qh-nBC"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="8Sg-d7-A0L" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1929" y="387"/>
         </scene>
