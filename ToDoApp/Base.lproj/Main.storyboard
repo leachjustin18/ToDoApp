@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NBC-LB-cG6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="h2g-PB-eXu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--To-Do's-->
         <scene sceneID="3kK-pp-JMR">
             <objects>
-                <tableViewController id="NBC-LB-cG6" sceneMemberID="viewController">
+                <tableViewController id="NBC-LB-cG6" customClass="ToDoListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="u2D-D5-Gyd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -303,15 +304,22 @@
                             <outlet property="delegate" destination="NBC-LB-cG6" id="9CK-tH-iMl"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="To-Do's" id="UXD-N7-eyb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="s6f-zA-xOr">
+                            <connections>
+                                <segue destination="78J-1N-0Kp" kind="presentation" id="vCh-pI-26b"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nSs-6G-e3e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-378" y="387"/>
+            <point key="canvasLocation" x="434" y="387"/>
         </scene>
-        <!--View Controller-->
+        <!--Add new to-do-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AddToDoItemViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -319,11 +327,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add new to-do" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yYb-DV-CIe">
+                                <rect key="frame" x="16" y="285" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="yYb-DV-CIe" secondAttribute="centerX" id="6Qa-pP-bsK"/>
+                            <constraint firstItem="yYb-DV-CIe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FBl-gp-wDp"/>
+                            <constraint firstAttribute="centerY" secondItem="yYb-DV-CIe" secondAttribute="centerY" id="aQX-lz-xKv"/>
+                            <constraint firstItem="yYb-DV-CIe" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ogC-Y1-SK3"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Add new to-do" id="ISL-2Y-6Un">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="PSv-79-h6i"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="5FS-qy-oAv"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1929" y="387"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Glq-Bf-ydA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h2g-PB-eXu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iUC-Ad-tMU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NBC-LB-cG6" kind="relationship" relationship="rootViewController" id="LQe-Ms-I3U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A7h-qw-fpH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-378" y="387"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iJu-lk-g4a">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="78J-1N-0Kp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0dg-6C-6n4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="h0n-uT-66e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9a7-n7-RME" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="387"/>
         </scene>
     </scenes>
 </document>

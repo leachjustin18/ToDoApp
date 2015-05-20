@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ToDoListTableViewController.h
 //  ToDoApp
 //
 //  Created by Justin Leach on 5/19/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ToDoListTableViewController : UITableViewController
 
 @end
-
