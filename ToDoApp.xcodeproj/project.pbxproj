@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56B75B0D1B0EB45400210BE3 /* ToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B75B0C1B0EB45400210BE3 /* ToDoItem.m */; };
 		56E961111B0C16BB00396C86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E961101B0C16BB00396C86 /* main.m */; };
 		56E961141B0C16BB00396C86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E961131B0C16BB00396C86 /* AppDelegate.m */; };
 		56E9611A1B0C16BB00396C86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56E961181B0C16BB00396C86 /* Main.storyboard */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		56B75B0B1B0EB45400210BE3 /* ToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoItem.h; sourceTree = "<group>"; };
+		56B75B0C1B0EB45400210BE3 /* ToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoItem.m; sourceTree = "<group>"; };
 		56E9610B1B0C16BB00396C86 /* ToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56E9610F1B0C16BB00396C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56E961101B0C16BB00396C86 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 				56E961131B0C16BB00396C86 /* AppDelegate.m */,
 				56E961371B0C19AD00396C86 /* ToDoListTableViewController.h */,
 				56E961381B0C19AD00396C86 /* ToDoListTableViewController.m */,
+				56B75B0B1B0EB45400210BE3 /* ToDoItem.h */,
+				56B75B0C1B0EB45400210BE3 /* ToDoItem.m */,
 				56E961181B0C16BB00396C86 /* Main.storyboard */,
 				56E961341B0C193F00396C86 /* AddToDoItemViewController.h */,
 				56E961351B0C193F00396C86 /* AddToDoItemViewController.m */,
@@ -225,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56E961141B0C16BB00396C86 /* AppDelegate.m in Sources */,
+				56B75B0D1B0EB45400210BE3 /* ToDoItem.m in Sources */,
 				56E961111B0C16BB00396C86 /* main.m in Sources */,
 				56E961391B0C19AD00396C86 /* ToDoListTableViewController.m in Sources */,
 				56E961361B0C193F00396C86 /* AddToDoItemViewController.m in Sources */,
@@ -424,6 +430,7 @@
 				56E961301B0C16BB00396C86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		56E961311B0C16BB00396C86 /* Build configuration list for PBXNativeTarget "ToDoAppTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +439,7 @@
 				56E961331B0C16BB00396C86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
