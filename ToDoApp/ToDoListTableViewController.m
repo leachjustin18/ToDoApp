@@ -28,7 +28,6 @@
     ToDoItem *item3 = [[ToDoItem alloc] init];
     item3.itemName = @"Read a book";
     [self.toDoItems addObject:item3];
-    
 }
 
 
@@ -61,9 +60,8 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
