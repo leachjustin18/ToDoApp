@@ -77,6 +77,7 @@
     ToDoItem *toDoItem = [self.toDoItems objectAtIndex:indexPath.row];
     cell.textLabel.text = toDoItem.itemName;
     
+    //If statment to show and 'hide' checkbox
     if (toDoItem.completed) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
